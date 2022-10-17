@@ -8,6 +8,16 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 1200px; 
+  margin-left: auto;
+  margin-right: auto; 
+  background: rgb(238, 218, 193);
+}
 h1 {
   font-size: 25px;
   font-family: "Silkscreen", cursive;
@@ -18,14 +28,6 @@ h1 {
   padding-bottom: 20px;
   box-shadow: 0px 0px 0px rgb(129, 129, 129);
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: rgb(238, 218, 193);
-}
-
 .cabeçalho {
   height: 100px;
   margin-bottom: 10px;
@@ -145,6 +147,8 @@ td {
 }
 table td img {
   width: 22px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo {
@@ -153,21 +157,19 @@ table td img {
   color: rgb(173, 241, 104);
 }
 
-input {
+.formulario {
+  display: grid;
+  text-align: center;
   margin-left: 10%;
-  margin-bottom: 10px;
-  top: 0;
-  left: 0;
   width: 80%;
   border: 1px solid #000;
-  outline: none;
-  background: none;
   padding: 10px;
   border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  outline: none;
 }
 
-button {
+.botão {
   margin-left: 38%;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -191,16 +193,9 @@ button {
   touch-action: manipulation;
 }
 
-button:hover {
+.botão:hover {
   background-color: #aa96da;
   color: #fff;
-}
-
-@media (min-width: 768px) {
-  button {
-    font-size: 1.125rem;
-    padding: 1rem 2rem;
-  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -218,9 +213,13 @@ button:hover {
     height: 90%;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   #conteiner {
     width: 90%;
     height: 90%;
+  }
+  .botão {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
   }
 }
