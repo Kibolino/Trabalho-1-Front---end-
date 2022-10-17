@@ -1,0 +1,226 @@
+/* Kleber Augusto Barbosa RA: 2022001447 */
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Silkscreen&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-size: 25px;
+  font-family: "Silkscreen", cursive;
+}
+#conteiner {
+  background-color: rgb(231, 211, 187);
+  width: 1200px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 0px rgb(129, 129, 129);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(238, 218, 193);
+}
+
+.cabeçalho {
+  height: 100px;
+  margin-bottom: 10px;
+}
+.cabeçalho-esquerda {
+  float: left;
+  height: 100px;
+  background-color: #aa96da;
+}
+.cabeçalho-direita {
+  height: 100px;
+  border-top: 25px solid rgb(238, 218, 193);
+  background-color: #aa96da;
+}
+.titulo_principal {
+  float: left;
+  margin-left: 5px;
+  color: rgb(0, 0, 0);
+  width: 200px;
+}
+
+.conteudo {
+  position: relative;
+  width: 50%;
+  height: auto;
+  background-color: whitesmoke;
+  float: left;
+  margin-left: 25px;
+  box-shadow: 0 0px 5px rgb(129, 129, 129);
+}
+
+.lateral_direita::-webkit-scrollbar {
+  display: none;
+}
+.lateral_direita {
+  position: relative;
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 480px;
+  background: #ffffd2;
+  width: 20%;
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.lateral_esquerda {
+  position: relative;
+  height: 250px;
+  background: #ffffd2;
+  width: 25%;
+  box-shadow: 10px 0 0 #c5fad5;
+  border-left: 10px solid rgb(231, 211, 187);
+  float: left;
+  margin-top: 20px;
+}
+
+.lateral_esquerda ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+}
+.lateral_esquerda ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.lateral_esquerda ul li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.lateral_esquerda ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 70px;
+}
+
+.lateral_esquerda ul li a .icon ion-icon {
+  position: relative;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+.lateral_esquerda ul li a .titulo {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+table th {
+  background-color: #c5fad5;
+}
+table th,
+td {
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  text-align: left;
+}
+table td img {
+  width: 22px;
+}
+
+.logo {
+  font-size: 96px;
+  --ionicon-stroke-width: 16px;
+  color: rgb(173, 241, 104);
+}
+
+input {
+  margin-left: 10%;
+  margin-bottom: 10px;
+  top: 0;
+  left: 0;
+  width: 80%;
+  border: 1px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+button {
+  margin-left: 38%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: #c5fad5;
+  border: 0 solid #e2e8f0;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: #aa96da;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  button {
+    font-size: 1.125rem;
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body,
+  #conteiner,
+  .conteudo,
+  .lateral_direita,
+  .lateral_esquerda,
+  .lateral_esquerda ul,
+  .lateral_esquerda ul li,
+  .lateral_esquerda ul li a,
+  .lateral_esquerda ul li a .icon ion-icon,
+  .lateral_esquerda ul li a .titulo {
+    width: 90%;
+    height: 90%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #conteiner {
+    width: 90%;
+    height: 90%;
+  }
+}
