@@ -2,91 +2,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=”description” content="Este é um projeto de um site criador de gráficos, criado com intuito de obter nota na matéria de desenvolvimento de sistema web.">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="”description”"
+      content="Este é um projeto de um site criador de gráficos, criado com intuito de obter nota na matéria de desenvolvimento de sistema web."
+    />
     <title>Criador de Gráficos</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </head>
 
   <body>
-  
-    <div id="conteiner" >
-     
-      <div class="cabeçalho">
-        <div class="cabeçalho-esquerda"><ion-icon class="logo" name="grid-outline"></ion-icon></div>
-        <div class="cabeçalho-direita">
-          <h1 class="titulo_principal">Criador de Gráficos</h1>
+    <div id="conteiner">
+      <header>
+        <div class="cabeçalho">
+          <div class="cabeçalho-esquerda">
+            <a href="mockup.html">
+              <ion-icon class="logo" name="grid-outline"></ion-icon>
+            </a>
+          </div>
+          <div class="cabeçalho-direita">
+            <h1 class="titulo_principal">Criador de Gráficos</h1>
+          </div>
         </div>
-      </div>
+      </header>
 
-      <div class="lateral_esquerda">
-        <ul>
+      <main>
+        <div class="lateral_esquerda">
+          <ul>
+            <li>
+              <a href="#" onclick="mudatipo('bar')">
+                <span class="icon"
+                  ><ion-icon name="bar-chart-outline"></ion-icon
+                ></span>
+                <span class="titulo">Gráfico de Barras </span>
+              </a>
+            </li>
 
-          <li>
-            <a href="#" onclick="mudatipo('bar')">
-              <span class="icon" ><ion-icon name="bar-chart-outline"></ion-icon></span>
-              <span class="titulo">Gráfico de Barras </span>
-            </a>
-          </li>
+            <li>
+              <a href="#" onclick="mudatipo('pie')">
+                <span class="icon"
+                  ><ion-icon name="pie-chart-outline"></ion-icon
+                ></span>
+                <span class="titulo">Gráfico de Pizza</span>
+              </a>
+            </li>
 
-          <li>
-            <a href="#" onclick="mudatipo('pie')">
-              <span class="icon"><ion-icon name="pie-chart-outline"></ion-icon></span>
-              <span class="titulo">Gráfico de Pizza</span>
-            </a>
-          </li>
+            <li>
+              <a href="#" onclick="mudatipo('line')">
+                <span class="icon"
+                  ><ion-icon name="analytics-outline"></ion-icon
+                ></span>
+                <span class="titulo">Gráfico de Linhas</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-          <li>
-            <a href="#" onclick="mudatipo('line')">
-              <span class="icon"><ion-icon name="analytics-outline"></ion-icon></span>
-              <span class="titulo">Gráfico de Linhas</span>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-      
-      <div class="lateral_direita">
-        <table>
-          <thead>
-            <tr>
-              <th>Categoria</th>
-              <th>Valor</th>
-              <th>Apagar</th>
-            </tr>
-            
-          </thead>
-          <tbody id="tbody"></tbody>
-          
-      </table>
+        <div class="lateral_direita">
+          <table>
+            <thead>
+              <tr>
+                <th>Categoria</th>
+                <th>Valor</th>
+                <th>Apagar</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
 
-      </div>
+        <div class="conteudo">
+          <canvas id="chart"></canvas>
 
-      <div class="conteudo">
-        <canvas id="chart"></canvas>
-
-          <div class="conteiner">
-            <hr><br>
+          <div>
+            <hr />
+            <br />
             <form onsubmit="reload()">
-            <input id="pushlabel" type="text" placeholder="Categoria" class="formulario"><br>
-            <input id="pushvalue" type="number" placeholder="Valor" class="formulario"><br>
-            <button id="push" class="botão">Adicionar</button><br>
+              <input
+                id="pushlabel"
+                type="text"
+                placeholder="Categoria"
+                class="formulario"
+              /><br />
+              <input
+                id="pushvalue"
+                type="number"
+                placeholder="Valor"
+                class="formulario"
+              /><br />
+              <button id="push" class="botão">Adicionar</button><br />
             </form>
-            <hr>
-      </div>
-
-      </div>
+            <hr />
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="code.js"></script>
-
   </body>
-  
 </html>
