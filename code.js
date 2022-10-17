@@ -136,3 +136,6 @@ function deletar(data) {// função para deletar elemetnos do array
 }
 
 /* -------------------------------------------------------------------------- */
+function reload(e){
+    event.preventDefault()
+}
