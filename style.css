@@ -13,14 +13,18 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  width: 1200px; 
-  margin-left: auto;
-  margin-right: auto; 
+  
   background: rgb(238, 218, 193);
 }
 h1 {
   font-size: 25px;
   font-family: "Silkscreen", cursive;
+}
+img{
+  width: 1000px;
+  height: 500px;
+  margin-left: 80px;
+  
 }
 #conteiner {
   background-color: rgb(231, 211, 187);
@@ -143,12 +147,10 @@ table th,
 td {
   border: 1px solid #ccc;
   padding: 1px 5px;
-  text-align: left;
+  text-align: center;
 }
 table td img {
   width: 22px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .logo {
@@ -167,6 +169,7 @@ table td img {
   border-radius: 5px;
   font-size: 1.1em;
   outline: none;
+  
 }
 
 .botão {
