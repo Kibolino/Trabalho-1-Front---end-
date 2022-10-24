@@ -80,9 +80,9 @@ push.addEventListener("click", pushValueChart);
 function pushValueChart() { /* Função para puxar valor dos campos de formulários */
   const pushValue = document.getElementById("pushvalue");
   const pushlabel = document.getElementById("pushlabel");
+ 
   myChart.data.datasets[0].data.push(pushValue.value);
   myChart.data.labels.push(pushlabel.value);
-
   myChart.update();
   listatabela();
   limpar();
@@ -100,9 +100,21 @@ function listatabela() {  // Função para criar tabela de dados
     let td_categoria = tr.insertCell(); // Criação de variável local para receber dados do array 
     let td_valor = tr.insertCell();
     let td_ações = tr.insertCell();
-
+    if(myChart.data.datasets[0].data[i] == '' ){
+        td_valor.innerHTML=0;
+        td_categoria.innerHTML=0;
+        console.log(myChart.data.datasets[0].data);
+    }
+    else
     td_valor.innerHTML = myChart.data.datasets[0].data[i];
     td_categoria.innerHTML = myChart.data.labels[i];
+
+    let imgEdit = document.createElement("img");
+    imgEdit.src = "img/create-outline.svg";
+    imgEdit.setAttribute(
+      "onclick",
+      "editar(" + JSON.stringify(myChart.data.datasets[0].data[i]) + ")"
+    );
 
     let imgDelet = document.createElement("img");
     imgDelet.src = "img/close-outline.svg";
@@ -112,16 +124,33 @@ function listatabela() {  // Função para criar tabela de dados
     );
 
     td_ações.appendChild(imgDelet);
+    td_ações.appendChild(imgEdit);
   }
 }
 
+/* -------------------------------------------------------------------------- */
+function editar(dados){
+  let tbody = document.getElementById("tbody");
+
+  document.getElementById('push').innerText = "Atualizar";
+
+  for (let i = 0; i < myChart.data.datasets[0].data.length; i++) {
+    if (myChart.data.datasets[0].data[i] == dados) {
+      document.getElementById("pushvalue").value = myChart.data.datasets[0].data[i];
+      document.getElementById("pushlabel").value = myChart.data.labels[i];
+      
+    }
+  }
+  
+  
+}
 /* -------------------------------------------------------------------------- */
 
 function limpar() { // função para apagar os campos de envio
   document.getElementById("pushvalue").value = "";
   document.getElementById("pushlabel").value = "";
 }
-
+/* -------------------------------------------------------------------------- */
 function deletar(data) {// função para deletar elemetnos do array
   let tbody = document.getElementById("tbody");
 
