@@ -73,7 +73,7 @@ function mudatipo(tipo) { /* Função para mudar o tipo de gráfico */
 
 }
 /* -------------------------------------------------------------------------- */
-
+listatabela();
 const push = document.getElementById("push");
 push.addEventListener("click", pushValueChart);
 
