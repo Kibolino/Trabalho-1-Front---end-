@@ -1,6 +1,6 @@
 /* Kleber Augusto Barbosa RA: 2022001447 */
 /* configuração do gráfico via chart */
-const labels = []; //array de categorias
+const labels = [Miguel,Heitor,Helena,Alice, Laura,Davi,Valentina]; //array de categorias
 const data = {
   labels: labels,
   datasets: [
@@ -22,7 +22,7 @@ const data = {
         'rgba(153, 102, 255, 1)',
         'rgba(255, 159, 64, 1)'
       ],
-      data: [], //array de valores
+      data: [6,5,8,10,9,3,7], //array de valores
     },
   ],
 };
